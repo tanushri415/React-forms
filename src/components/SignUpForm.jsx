@@ -1,10 +1,9 @@
 import { useState } from 'react';
 
-const SignUpForm = () => {
+const SignUpForm = ({ setToken }) => {
   const [username, setUsername] = useState(''); // since this is a function we call it w/ () and pass it an empty string
   const [password, setPassword] = useState(''); // this is another piece of state that will create an empty string
   const [error, setError] = useState(null);
-  const [token, setToken] = useState(null);
 
   async function handleSubmit(event) {
     event.preventDefault();
